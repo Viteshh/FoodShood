@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodshood/hidden_drawer.dart';
 import 'package:foodshood/home_page.dart';
 import 'package:foodshood/userCredentials/credenstials.dart';
 import 'package:foodshood/userCredentials/onboarding.dart';
@@ -26,9 +27,17 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primaryColor: const Color.fromARGB(237, 237, 237, 237),
+        appBarTheme: const AppBarTheme(
+          iconTheme: IconThemeData(color: Colors.black),
+          elevation: 0,
+          titleTextStyle: TextStyle(color: Color.fromARGB(236, 0, 0, 0)),
+          shadowColor: Color.fromARGB(237, 237, 237, 237),
+          color: Color.fromARGB(
+              237, 237, 237, 237), // Set the AppBar color to your custom color
+        ),
       ),
-      home: const HomePage(),
+      home: const HiddenDrawer(),
     );
   }
 }
